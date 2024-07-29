@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    @page {
+    size: 8.5in 14in; /* Size for long bond paper */
+    margin: 0.5in; /* Margins */
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+  }
+  
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+/* Add this to your existing CSS */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS devices */
+}
+
+td, th {
+  border: 1px solid #000000;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.one {
+    border: 1px solid black; /* Adds a solid border with a light gray color */
+    color: blue;
+    padding: 100px; /* Adds padding inside the container */
+    height: -10px; /* Sets height automatically based on content, or specify a value */
+    width: 100%; /* Sets the width to 100% of the containing element */
+    text-align: center; /* Centers the text and any inline elements like images */
+    font-weight: bold;
+    font-size: 50;
+
+    
+  
+ 
+
+}
+.br{
+  color: blue;
+  font-size: 50;
+}
+.one img {
+    max-width: 140px; /* Ensures the image doesn't exceed the width of its container */
+    height: 60px; /* Maintains the aspect ratio */
+}
+.italic-text {
+    font-style: italic;
+    font-weight: bold;
+    color: black;
+}
+.r th{
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 1px;
+  font-size: 50px;
+  
+
+
+
+}
+.lerner-indent {
+    color: blue;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    text-indent: -20px; /* Adjust as needed */
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+    position: relative; /* Relative positioning to contain the absolute child */
+}
+
+
+.lerner-indent th {
+    border: 1px solid black;
+    padding:70px;
+}
+.lerner-indent h3 {
+    margin: 0; /* Removes default margin */
+    padding-left: 120px; /* Adjust padding to provide space for the image box */
+}
+
+.image-box {
+    border: 2px solid #000;
+    padding: 10px;
+    width: 170px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    border-radius: 0; /* Optional: adds rounded corners */
+    position: absolute; /* Position the image box absolutely */
+    top: 20px; /* Adjust as needed for vertical position */
+    right: 100px; /* Adjust as needed for horizontal position */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.image-box img {
+    max-width: 100%; /* Ensures the image fits within the container */
+    max-height: 100%; /* Ensures the image fits within the container */
+    height: auto; /* Maintains the aspect ratio */
+    width: auto; /* Maintains the aspect ratio */
+}
+    /* New row specific styling */
+    .generated th{ 
+        font-size: 20px; /* Smaller font size */
+        padding: 5px; /* Smaller padding */
+        height: 20px; /* Set height for the row */
+        background-color: #f0f0f0; /* Optional background color */
+        padding-left: 0px; /* Adjust the text position horizontally */
+        text-align: left; /* Align text to the left if needed */
+        color: blue;
+        border-color: #000000;
+        
+        
+     
+
+        
+
+    }
+    .uli {
+  background-color: #ffffff; /* Background color for the row */
+  font-size:15px; /* Font size for text in the row */
+  height:0px; /* Desired height for the row */
+  text-align: center;
+  position: relative; /* Establishes a containing block for absolutely positioned elements */
+}
+.date input[type="text"] {
+  text-align: center; /* Centers the text inside the input field */
+  width: 50%; /* Ensures the input field takes up the full width of its container */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  height: 30px;
+  margin-bottom: 33px;
+}
+
+    .uli td, .uli th {
+  border: 1px solid #000000; /* Change to desired border color */
+}
+.left-align {
+  text-align: left; /* Ensure text is aligned to the left */
+}
+
+.left-aligns {
+  text-align: left; /* Ensure text is aligned to the left */
+}
+
+
+
+
+    .small-box {
+      width: 30px; /* Width of each small box */
+      height: 35px; /* Height of each small box */
+      background-color: #ffffff; /* Background color of each box */
+      border: 0.5px solid #000000; /* Change to desired border color */
+      display: flex; /* Use flexbox to center text */
+      justify-content: center; /* Center text horizontally */
+      align-items: center; /* Center text vertically */
+      font-size: 12px; /* Font size for the text inside the box */
+      margin-bottom: 29px; /* Adjust this value to move the box to the right */
+
+      
+    }
+    .small-boxs {
+      width: 15px; /* Width of each small box */
+      height: 35px; /* Height of each small box */
+      background-color: #ffffff; /* Background color of each box */
+      border: 0.5px solid #000000; /* Change to desired border color */
+      display: flex; /* Use flexbox to center text */
+      justify-content: center; /* Center text horizontally */
+      align-items: center; /* Center text vertically */
+      font-size: 12px; /* Font size for the text inside the box */
+      margin-bottom: 29px; /* Adjust this value to move the box to the right */
+
+      
+    }
+/* Container for the small boxes */
+.box-container {
+  display: flex; /* Enables flexbox layout */
+  flex-wrap: nowrap; /* Prevents wrapping of items */
+  justify-content: flex-start; /* Aligns items to the start of the container */
+  align-items: center; /* Aligns items vertically center */
+  height: 5px;
+  padding-left: 500px;
+
+}
+.profile{
+        font-size: 20px; /* Smaller font size */
+        padding: 10px; /* Smaller padding */
+        height: 2px; /* Set height for the row */
+        background-color: #f0f0f0; /* Optional background color */
+        padding-left: 20px; /* Adjust the text position horizontally */
+        text-align: left; /* Align text to the left if needed */
+        color: blue;
+        border-color: #000000;
+
+        
+}
+/* Specific table styling (if applying only to a specific table) */
+.my-table {
+        font-size: 20px; /* Smaller font size */
+        padding: 10px; /* Smaller padding */
+        height: 220px; /* Set height for the row */
+        background-color: #ffffff; /* Optional background color */
+        padding-left: 20px; /* Adjust the text position horizontally */
+        text-align: left; /* Align text to the left if needed */
+        color: rgb(0, 0, 0);
+        border-color: #000000;
+      }
+        .item-container {
+  position: relative; /* Enable positioning of children */
+}
+
+.number {
+  position: absolute; /* Position independently */
+  background: #ffffff; /* Background color for visibility */
+  padding: 5px; /* Padding for spacing */
+  border: 1px solid #ffffff; /* Border for visibility */
+}
+
+.text {
+  position: absolute; /* Position independently */
+  padding: 5px; /* Padding for spacing */
+  background: #ffffff; /* Background color for visibility, adjust or remove as needed */
+  color: black; /* Change text color to black */
+  border: none; /* Remove border */
+  font-weight: bold;
+}
+
+
+/* Position the first number and text */
+#number1 {
+  top: -20px; /* Adjust top position */
+  left: 0; /* Adjust left position */
+  font-size: 10px;
+  color: black; /* Change text color to black */
+  border: none; /* Remove border */
+  background: #ffffff; /* Background color for visibility */
+}
+
+#text1 {
+  top: -28px; /* Align with the first number */
+  left: 30px; /* Adjust left position relative to the number */
+  font-size: 15px;
+}
+
+/* Position the second number and text */
+#number2 {
+  top: 30px; /* Adjust top position to be below the first item */
+  left: 0; /* Adjust left position */
+  font-size: 10px;
+  color: black; /* Change text color to black */
+  border: none; /* Remove border */
+  background: #ffffff; /* Background color for visibility */
+}
+
+#text2 {
+  top: 10px; /* Align with the first number */
+  left: 30px; /* Adjust left position relative to the number */
+  text-align: left; /* Ensure text is aligned to the left */
+  font-size: 15px;
+}
+
+.box1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 4 columns */
+  gap: 20px; /* Space between boxes */
+  margin-top: -33px;
+  position: relative; /* Allows movement using left/right properties */
+  left:1250px; /* Move the container 50px to the right. Adjust as needed */
+  width: 800px;
+  top: -0.5px;
+}
+
+.box {
+  background: #ffffff; /* Background color for boxes */
+  padding: 5px; /* Padding inside each box */
+  border: 1px solid black; /* Border for visibility */
+  text-align: center; /* Center text horizontally */
+  height: 20px; /* Height of each box */
+  
+}
+
+.box3 {
+  background: #ffffff; /* Background color for boxes */
+  padding: 5px; /* Padding inside each box */
+  border: 1px solid black; /* Border for visibility */
+  text-align: center; /* Center text horizontally */
+  height: 20px; /* Height of each box */
+  width: 150px;
+  
+}
+.date-row {
+  position: absolute; /* Allows positioning relative to the containing element */
+  top: 1px; /* Adjust to move the input box down from the top */
+  right: 100px; /* Adjust to move the input box left from the right edge */
+  padding: 5px; /* Adds padding around the input box */
+}
+
+.date-row input[type="text"] {
+  width: 150px; /* Set a specific width for the input field */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  height: 20px; /* Adjust height as needed */
+  padding: 15px; /* Adds padding inside the input box */
+  font-size: 20px; /* Adjust font size inside the input box */
+  text-align: center;
+}
+
+
+
+
+</style>
+</head>
+<body>
+<table class="one">
+  <tr>
+    <td> <img src="TESDA-Logo.png" alt="Logo" class="logo"></td>
+    <td>Technical Education and Skills Development Authority<br class="br">Pangasiwaan sa Edukasyong Teknikal at Pagpapaunlad ng Kasanayan</td>
+    <td><p class="italic-text">MIS 03 - 01<br>(ver.2018)</p></td>
+  </tr>
+</table>
+<table class="r">
+  <tr>
+      <th>Registration Form</th>
+  </tr>
+</table>
+<table class="lerner-indent">
+  <tr>
+    <th colspan="2" class="learner-indent">
+    
+      <div class="image-box">
+        <img src="TESDA-Logo.png" alt="Profile Image">
+      </div>
+      <h3>LEARNERS PROFILE FORM</h3>
+    </th>
+  </tr>
+  </table>
+
+ <table>
+    <!-- Added Row Here -->
+    <tr class="generated">
+      <th>1. T2MIS Auto Generated</th>
+  </tr>
+</table>
+
+<table class="uli">
+  <tr>
+    <th class="left-align">
+      1.1. Unique Learner Identifier<br>(ULI) Number:
+
+      <div class="box-container">
+        <div class="small-box">1</div>
+        <div class="small-box">2</div>
+        <div class="small-box">3</div>
+        <div class="small-box">4</div>
+        <div class="small-box">5</div>
+        <div class="small-box">6</div>
+        <div class="small-box">7</div>
+        <div class="small-box">8</div>
+        <div class="small-box">9</div>
+        <div class="small-box">10</div>
+        <div class="small-boxs">-</div>
+        <div class="small-box">12</div>
+        <div class="small-box">13</div>
+        <div class="small-box">14</div>
+      </div>
+      <!-- Correctly place the date row and its content -->
+      <div class="date-row">
+        1.2 Entry Date: <input type="text" placeholder="mm/dd/yy" name="entry_date" id="entry_date">
+      </div>
+    </th>
+  </tr>
+</table>
+
+
+<table>
+  <tr class="profile">
+    <th class="left-align">2. Learner/Manpower Profile</th>
+  </tr>
+</table>
+
+
+<table>
+  <tr class="my-table">
+    <td>
+      <div class="item-container">
+        <div class="number" id="number1">2.1.</div>
+        <div class="text" id="text1">Name:</div>
+        
+        <div class="number" id="number2">2.2.</div>
+        <div class="text" id="text2">Complete<br>Permanent Mailing<br> Address:</div>
+      </div>
+
+      <div class="box1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box3">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box3">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box3">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box3">12</div>
+
+
+      </div>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+</table>
+
+
+</body>
+</html>
